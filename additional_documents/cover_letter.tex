@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+
+\begin{document}
+\singlespacing
+
+\begin{flushright}
+Prof. Humberto Bernal \\
+Universidad Colegio Mayor de Cundinamarca \\
+Ph.D. in Economics, Universidad de los Andes, Colombia \\
+E-mail: \href{mailto:hbernal@uniandes.edu.co}{hbernal@uniandes.edu.co}, \href{mailto:hbernalc@universidadmayor.edu.co}{hbernalc@universidadmayor.edu.co} \\
+ORCID: \href{https://orcid.org/0000-0002-4864-1726}{0000-0002-4864-1726} \\
+\today
+\end{flushright}
+
+\vspace{1.5em}
+
+\begin{flushleft}
+The Editorial Board \\
+\textit{Computational Economics} \\
+Official Journal of the Society for Computational Economics (SCE)
+\end{flushleft}
+
+\vspace{1.5em}
+
+\noindent Dear Editors of \textit{Computational Economics},
+
+\vspace{1.5em}
+
+\noindent It is a great privilege to submit the manuscript entitled \textbf{``Identifying Rational Types in Unknown Environments under an Indirect Dynamic Mechanism''} for consideration for publication in \textit{Computational Economics}.
+
+This paper develops a novel computational and theoretical dynamic mechanism design framework tailored to environments where information asymmetry, strategic secrecy, and operational frictions are paramount. Specifically, the framework addresses the challenge of screening and type identification under incomplete information, utilizing the empirical context of kidnapping for ransom in Colombia.
+
+The manuscript bridges advanced dynamic game theory with modern computational economics, resolving a central computational challenge: backward induction in long-horizon dynamic games with continuous state spaces and multidimensional belief simplexes suffers from the curse of dimensionality. To overcome this, the paper develops three primary interconnected contributions:
+
+\begin{enumerate}
+    \item \textbf{Deep Learning Neural Network Value Function Approximation:} To compute the Perfect Bayesian Equilibrium (PBE) and solve the dynamic Bellman equations across high-dimensional belief spaces, we train multi-layer perceptron neural networks in PyTorch (\texttt{CaptorValueNet}) that approximate the captor's continuation values with high numerical precision and stability.
+    
+    \item \textbf{Stochastic Implementation via the MDG Process:} The Mano de Dios--Guadalupe (MDG) kernel endogenously models execution frictions as maximum-entropy logit perturbations, guaranteeing full support across all branches of the game and keeping Bayesian belief updating strictly well-defined off-path.
+    
+    \item \textbf{Identification Theorem and Interactive Theorem Proving:} We establish the Rational Type Identification Theorem, proving almost sure convergence of posterior beliefs to the true agent type in prolonged interactions. The complete logical dependency graph, algebraic steps, and asymptotic limits are formally verified using the \textbf{Lean 4 Interactive Theorem Prover}.
+\end{enumerate}
+
+Additionally, all empirical estimations (competing risks duration models in Stata), PyTorch neural network weights, formal Lean 4 verification proofs, and the interactive simulation engine deployed online on Streamlit (\url{https://7kkgn4sfscykkfvv5794qw.streamlit.app/}) are provided for full replication in the dedicated GitHub repository: \url{https://github.com/Donzhumber/CE.git}.
+
+Given the mission of \textit{Computational Economics} as the premier venue for research at the interface of economics, computer science, and machine learning, we believe our contribution will strongly resonate with your readership.
+
+Thank you very much for your consideration.
+
+\vspace{2.5em}
+
+\begin{flushleft}
+Sincerely,
+
+\vspace{2.5em}
+
+\textbf{Prof. Humberto Bernal, Ph.D.} \\
+Universidad Colegio Mayor de Cundinamarca \\
+Doctor in Economics, Universidad de los Andes, Colombia
+\end{flushleft}
+
+\end{document}
