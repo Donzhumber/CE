@@ -1,42 +1,65 @@
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-._*
+# ==============================================================================
+# .gitignore — Computational Economics Submission & Replication Package
+# ==============================================================================
 
-# LaTeX intermediate build files
+# macOS metadata
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# LaTeX build & intermediate files
 *.aux
 *.log
 *.out
 *.synctex.gz
 *.fls
 *.fdb_latexmk
-*.toc
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
 *.nav
 *.snm
+*.toc
 *.vrb
-*.bcf
-*.run.xml
 missfont.log
 
-# Python
+# Python cache & virtual environments
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+env/
 venv/
 .venv/
-env/
-.pytest_cache/
+ENV/
+env.bak/
+venv.bak/
 
-# Lean 4 Lake build artifacts
+# Lean 4 / Lake build artifacts
 .lake/build/
-lean/.lake/build/
+.lake/packages/
 
-# Do not ignore important assets
+# Editors & IDE temporary files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ==============================================================================
+# Whitelist Essential Research Assets
+# ==============================================================================
 !*.pdf
 !*.zip
 !*.pt
 !*.dta
 !*.xlsx
 !*.csv
-*.brf
+!main/*.bbl
